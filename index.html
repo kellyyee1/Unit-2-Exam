@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Unit 2 Exam Submission</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Source+Serif+4:ital,wght@0,300;0,400;1,300&display=swap');
+
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: 'Source Serif 4', Georgia, serif;
+            font-weight: 300;
+            background: #faf8f5;
+            color: #1a1a1a;
+            min-height: 100vh;
+            padding: 0;
+        }
+
+        header {
+            background: #1a1a1a;
+            color: #faf8f5;
+            padding: 60px 80px 50px;
+        }
+
+        header h1 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2.8rem;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+        }
+
+        header p {
+            font-size: 1.1rem;
+            color: #bbb;
+            letter-spacing: 0.3px;
+        }
+
+        main {
+            max-width: 860px;
+            margin: 0 auto;
+            padding: 60px 40px 80px;
+        }
+
+        .intro {
+            font-size: 1rem;
+            color: #555;
+            margin-bottom: 48px;
+            line-height: 1.7;
+            border-left: 3px solid #1a1a1a;
+            padding-left: 20px;
+        }
+
+        .problem-list {
+            list-style: none;
+            counter-reset: problems;
+        }
+
+        .problem-list li {
+            counter-increment: problems;
+            display: flex;
+            align-items: flex-start;
+            gap: 24px;
+            padding: 28px 0;
+            border-bottom: 1px solid #e0ddd8;
+        }
+
+        .problem-list li:first-child { border-top: 1px solid #e0ddd8; }
+
+        .num {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 2rem;
+            color: #c8b89a;
+            min-width: 44px;
+            line-height: 1;
+            padding-top: 4px;
+        }
+
+        .problem-info { flex: 1; }
+
+        .problem-info h2 {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .problem-info p {
+            font-size: 0.92rem;
+            color: #666;
+            line-height: 1.6;
+            margin-bottom: 12px;
+        }
+
+        .problem-info a {
+            display: inline-block;
+            text-decoration: none;
+            background: #1a1a1a;
+            color: #faf8f5;
+            padding: 7px 20px;
+            border-radius: 3px;
+            font-size: 0.88rem;
+            letter-spacing: 0.5px;
+            transition: background 0.2s;
+        }
+
+        .problem-info a:hover { background: #444; }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            font-size: 0.85rem;
+            color: #aaa;
+            border-top: 1px solid #e0ddd8;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Unit 2 Exam Submission</h1>
+        <p>By: Kelly Yee</p>
+    </header>
+
+    <main>
+        <p class="intro">
+            This page links to the test pages for each problem in the Unit 2 Exam. Click each link to test the implementation.
+        </p>
+
+        <ol class="problem-list">
+            <li>
+                <div class="num">1</div>
+                <div class="problem-info">
+                    <h2>Palindrome Checker</h2>
+                    <p>PHP function <code>isPalindrome</code> — case-insensitive palindrome detection with live test cases.</p>
+                    <a href="palindrome.php">Test isPalindrome →</a>
+                </div>
+            </li>
+            <li>
+                <div class="num">2</div>
+                <div class="problem-info">
+                    <h2>Line Sum</h2>
+                    <p>PHP function <code>lineSum</code> — returns the sum of all integers on a given line of a text file.</p>
+                    <a href="linesum.php">Test lineSum →</a>
+                </div>
+            </li>
+            <li>
+                <div class="num">3</div>
+                <div class="problem-info">
+                    <h2>Image Gallery Search</h2>
+                    <p>Basic case-insensitive image search — returns a list of links to matching image filenames.</p>
+                    <a href="gallery.html">Test Image Search →</a>
+                </div>
+            </li>
+            <li>
+                <div class="num">4</div>
+                <div class="problem-info">
+                    <h2>Image Gallery Smart Search</h2>
+                    <p>Enhanced search with multi-term support, quoted phrases, and thumbnail results linking to full images.</p>
+                    <a href="gallery2.html">Test Smart Search →</a>
+                </div>
+            </li>
+            <li>
+                <div class="num">5</div>
+                <div class="problem-info">
+                    <h2>Coin Flip</h2>
+                    <p>Randomly flips a coin and tracks heads/tails counts.</p>
+                    <a href="coinflip.html">Test Coin Flip →</a>
+                </div>
+            </li>
+            <li>
+                <div class="num">6</div>
+                <div class="problem-info">
+                    <h2>Essay Builder</h2>
+                    <p>Appends paragraphs from a textarea to a div and clears the input.</p>
+                    <a href="essay.html">Test Essay Builder →</a>
+                </div>
+            </li>
+        </ol>
+    </main>
+
+</body>
+</html>

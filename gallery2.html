@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Gallery Smart Search</title>
+    <style>
+        body { font-family: Georgia, serif; max-width: 600px; margin: 60px auto; background: #f9f6f1; color: #222; }
+        h1 { font-size: 1.8rem; border-bottom: 2px solid #333; padding-bottom: 8px; }
+        fieldset { border: 1px solid #aaa; border-radius: 6px; padding: 16px; }
+        input[type="text"] { padding: 8px; font-size: 1rem; width: 350px; border: 1px solid #aaa; border-radius: 4px; }
+        input[type="submit"] { padding: 8px 18px; font-size: 1rem; background: #333; color: #fff; border: none; border-radius: 4px; cursor: pointer; margin-left: 8px; }
+        p { color: #555; font-size: 0.95rem; }
+        .back-btn { display: inline-block; margin-bottom: 20px; padding: 7px 18px; background: #555; color: #fff; text-decoration: none; border-radius: 4px; font-size: 0.9rem; }
+        .back-btn:hover { background: #333; }
+    </style>
+</head>
+<body>
+    <a class="back-btn" href="index.html">← Back</a>
+    <h1>Image Gallery Smart Search</h1>
+    <p>Search for images by name. Use multiple words to match any of them, or wrap phrases in quotes for exact matches.</p>
+    <form action="search2.php" method="get">
+        <fieldset>
+            Type a query: <input type="text" name="query" /> <br /><br />
+            <input type="submit" value="Search" />
+        </fieldset>
+    </form>
+    <h2>Search Cheat Sheet</h2>
+
+    <h3 style="font-size: 1rem; margin: 12px 0 8px;">Single-Term Searches</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem; margin-bottom: 24px;">
+        <thead>
+            <tr style="background: #333; color: #fff;">
+                <th style="padding: 9px 14px; text-align: left;">Search Query</th>
+                <th style="padding: 9px 14px; text-align: left;">Matches</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 8px 14px;"><code>tea</code></td><td style="padding: 8px 14px;">tea.jpg, teapot.jpg, steamboat.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd; background: #f5f2ee;"><td style="padding: 8px 14px;"><code>pot</code></td><td style="padding: 8px 14px;">teapot.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 8px 14px;"><code>boat</code></td><td style="padding: 8px 14px;">steamboat.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd; background: #f5f2ee;"><td style="padding: 8px 14px;"><code>ocean</code></td><td style="padding: 8px 14px;">ocean.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 8px 14px;"><code>beach</code></td><td style="padding: 8px 14px;">beach.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd; background: #f5f2ee;"><td style="padding: 8px 14px;"><code>flower</code></td><td style="padding: 8px 14px;">flower.jpg, sunflower.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 8px 14px;"><code>sun</code></td><td style="padding: 8px 14px;">sunflower.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd; background: #f5f2ee;"><td style="padding: 8px 14px;"><code>cat</code></td><td style="padding: 8px 14px;">cat.jpg, catfish.jpg</td></tr>
+            <tr><td style="padding: 8px 14px;"><code>fish</code></td><td style="padding: 8px 14px;">catfish.jpg</td></tr>
+        </tbody>
+    </table>
+
+    <h3 style="font-size: 1rem; margin: 0 0 8px;">Multi-Term &amp; Quoted Phrase Searches</h3>
+    <table style="width: 100%; border-collapse: collapse; font-size: 0.92rem;">
+        <thead>
+            <tr style="background: #333; color: #fff;">
+                <th style="padding: 9px 14px; text-align: left;">Search Query</th>
+                <th style="padding: 9px 14px; text-align: left;">Matches</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 8px 14px;"><code>cat flower</code></td><td style="padding: 8px 14px;">cat.jpg, catfish.jpg, flower.jpg, sunflower.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd; background: #f5f2ee;"><td style="padding: 8px 14px;"><code>tea ocean</code></td><td style="padding: 8px 14px;">tea.jpg, teapot.jpg, steamboat.jpg, ocean.jpg</td></tr>
+            <tr style="border-bottom: 1px solid #ddd;"><td style="padding: 8px 14px;"><code>sunflower flower</code></td><td style="padding: 8px 14px;">sunflower.jpg, flower.jpg</td></tr>
+            <tr style="background: #f5f2ee;"><td style="padding: 8px 14px;"><code>"sun flower"</code></td><td style="padding: 8px 14px;">no results (exact phrase, no space in filename)</td></tr>
+        </tbody>
+    </table>
+</body>
+</html>
